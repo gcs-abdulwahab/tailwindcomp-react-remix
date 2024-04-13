@@ -14,7 +14,12 @@ interface IContactDetail {
 	address: string;
 	image: string;
 	website: string;
-	socialLinks: { link: string; url: string }[];
+	socialLinks: ISocialLink[];
+}
+
+interface ISocialLink {
+	url: string;
+	icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
 const contactDetail: IContactDetail = {
@@ -26,10 +31,9 @@ const contactDetail: IContactDetail = {
 	image: "https://fakeimg.pl/600x400",
 	website: "https://example.com",
 	socialLinks: [
-		{ link: "facebook", url: "https://www.facebook.com/example" },
-		{ link: "github", url: "https://github.com/example" },
-		{ link: "twitter", url: "https://twitter.com/example" },
-		
+		{ url: "https://www.facebook.com/example", icon: PhoneIcon },
+		{ url: "https://github.com/example", icon: FaceSmileIcon },
+		{ url: "https://twitter.com/example", icon: GlobeAltIcon },
 	],
 };
 
@@ -54,11 +58,11 @@ const VCard = (contact: IContactDetail) => {
 				</div>
 				<div id="partb" className="flex flex-col  space-y-3">
 					{contact.socialLinks.map((link, index) => (
-						<div key={index}  className=" ml-4 flex space-x-4">
+						<div key={index} className="ml-4 flex space-x-4">
 							<span className="prose">
-								<PhoneIcon className="h-6 w-6 text-blue-500" />
+								<link.icon className="h-6 w-6 text-blue-500" />
 							</span>
-							<span>{contact.phone}</span>
+							<span>{link.url}</span>
 						</div>
 					))}
 
