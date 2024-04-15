@@ -2,6 +2,21 @@
 export type Item = {
     text: string;
 };  
+export type BannerType = {
+	title: string;
+	subtitle: string;
+	website: string;
+	date_duration: string;
+};
+
+export const BannerData: BannerType = {
+    title: "New Year Sale",
+    subtitle: "upto 80% off",
+    website: "www.reallygreatsite.com",
+    date_duration: "01 - 29 July 2029",
+};
+
+
 export const resume_data = {
     name: "Abdul Wahab",
     title: "Content Manager Remix",
