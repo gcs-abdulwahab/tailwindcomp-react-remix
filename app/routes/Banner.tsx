@@ -17,14 +17,20 @@ type BannerType = {
 
 //  write loader
 export function loader() {
-	const data: BannerType = {
+    const data: BannerType = {
 		title: "New Year Sale",
 		subtitle: "upto 80% off",
 		website: "www.reallygreatsite.com",
-		date_duration: "01 - 29 July 2092",
-	};
+		date_duration: "01 - 29 July 2029",
+    };
+    // return banner data after 3 seconds and return the promise
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(json(data));
+        }, 3000);
+    })
 
-	return json(data);
+	
 }
 
 const Banner = () => {
