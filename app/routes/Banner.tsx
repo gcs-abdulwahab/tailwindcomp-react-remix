@@ -1,7 +1,9 @@
+import { ChevronRight } from "lucide-react"
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import { Button } from "~/components/ui/button";
 import type { BannerType } from "~/data/data";
-import {BannerData} from "~/data/data";
+import { BannerData } from "~/data/data";
 
 // create the type
 
@@ -39,9 +41,10 @@ const Banner = () => {
 				<h2 className="text-6xl uppercase tracking-widest">
 					{data.subtitle}
 				</h2>
-				<button className="max-w-fit bg-gradient-to-r from-yellow-700 to-orange-300 p-2">
-					{data.date_duration}
-				</button>
+				
+				<Button  className="bg-gradient-to-r from-yellow-700 to-orange-300 p-2"  >
+				<ChevronRight className="h-4 w-4" /> {data.date_duration}
+				</Button>
 			</div>
 		</div>
 	);
