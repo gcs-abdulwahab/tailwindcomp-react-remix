@@ -17,9 +17,9 @@ type JobExperienceType = {
 const JobExperience = (job: JobExperienceType) => {
 	return (
 		<div className="job">
-			<h3 id="duration" className="prose">
+			<h2 id="duration" className="prose">
 				{job.duration}
-			</h3>
+			</h2>
 			<h3 id="company" className="prose">
 				{job.company}
 			</h3>
