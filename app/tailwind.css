@@ -76,6 +76,9 @@
   }
 
 
-  p {
+  /* p {
     @apply border-2 border-dotted border-red-400;
+  } */
+.size-8{
+    @apply bg-red-400;
   }
