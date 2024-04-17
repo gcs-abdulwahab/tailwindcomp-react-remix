@@ -68,7 +68,8 @@ const SignalSidebar = ({ variant }: { variant: string }) => {
 const SignalBanner = () => {
 	return (
 		<div className="w-full items-center flex justify-center bg-slate-500 p-5">
-			<SignalSidebar variant="left" />
+            <SignalSidebar variant="left" />
+            {/* TODO: ShadCN  radio button  which will toggle between left and right */}
 		</div>
 	);
 };
