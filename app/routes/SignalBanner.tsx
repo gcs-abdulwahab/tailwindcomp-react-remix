@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Label } from "~/components/ui/label";
 import { Switch } from "~/components/ui/switch";
 import { cn } from "~/lib/utils";
@@ -81,13 +82,16 @@ const SignalSidebar = ({ variant }: { variant: string }) => {
 };
 
 const SignalBanner = () => {
+	// use state for left and right
+	const [direction, setDirection] = useState("left");
+
 	return (
 		<div className="w-full items-center flex justify-center bg-slate-500 p-5 flex-col gap-2">
 			<SignalSidebar variant="left" />
 			{/* TODO: ShadCN  radio button  which will toggle between left and right */}
-			<div className="flex items-center space-x-2">
-				<Switch id="airplane-mode" />
-				<Label htmlFor="airplane-mode">Left</Label>
+			<div className="flex items-center space-x-2 w-44">
+				<Switch id="direction" onCheckedChange={()=>setDirection(direction==="left"?"right":"left")} />
+				<Label htmlFor="direction" className="text-4xl text-white">{direction}</Label>
 			</div>
 		</div>
 	);
