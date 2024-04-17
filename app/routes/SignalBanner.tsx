@@ -46,11 +46,7 @@ const Sign = ({ signData , variant }: { signData: signDataType , variant: string
 };
 
 const SignalSidebar = ({ variant }: { variant: string }) => {
-    
-    // by default variant is left 
-    // if variant is right then apply flex-row-reverse on div element with id signboard
-
-
+   
 	return (
         <div id="signboard" className={cn("flex w-[700px]    border-8 border-solid border-white  justify-center text-white",
         variant === "right" ? "flex-row-reverse" : "flex-row"
