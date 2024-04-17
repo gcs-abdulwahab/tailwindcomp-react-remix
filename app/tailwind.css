@@ -74,9 +74,9 @@
 		@apply bg-background text-foreground;
 	}
 }
-
-/* div , h1 , h2 , img , p , span , Switch , Label {
-    @apply border-2 border-dotted border-red-400;
+/* 
+div , h1 , h2 , img , p , span , Switch , Label {
+    @apply border-2 border-dotted border-red-400 p-1; 
 
   } */
 
@@ -85,8 +85,8 @@ p{
   @apply p-2
 }
 
-.size-8 {
-	@apply bg-red-400;
+.size-8 , .size-24 {
+	@apply bg-green-400;
 }
 
 
