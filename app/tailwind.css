@@ -74,11 +74,15 @@
 		@apply bg-background text-foreground;
 	}
 }
-/* 
-div , h1 , h2 , img , p , span , Switch , Label {
+
+div , h1 , h2 , 
+img , p , span , 
+header , footer , main , nav,
+button , 
+Switch , Label  {
     @apply border-2 border-dotted border-red-400 p-1; 
 
-  } */
+  }
 
 
 p{
