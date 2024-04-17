@@ -87,7 +87,7 @@ const SignalBanner = () => {
 
 	return (
 		<div className="w-full items-center flex justify-center bg-slate-500 p-5 flex-col gap-2">
-			<SignalSidebar variant="left" />
+			<SignalSidebar variant={direction} />
 			{/* TODO: ShadCN  radio button  which will toggle between left and right */}
 			<div className="flex items-center space-x-2 w-44">
 				<Switch id="direction" onCheckedChange={()=>setDirection(direction==="left"?"right":"left")} />
