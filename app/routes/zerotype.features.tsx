@@ -20,7 +20,7 @@ const FeatureItem = () => {
 
 const features = () => {
 	return (
-		<main className="w-full flex flex-col">
+		<>
 			<h1 className="text4xl font-bold">Features</h1>
 			<p>
 				Change, add, and remove items as you like. If you're having problems
@@ -31,7 +31,7 @@ const features = () => {
 			<FeatureItem />
 			<FeatureItem />
 			<FeatureItem />
-		</main>
+		</>
 	);
 };
 
