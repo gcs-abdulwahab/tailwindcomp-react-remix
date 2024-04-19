@@ -81,7 +81,7 @@ header , footer , main , nav,
 button , 
 input,textarea,
 Switch , Label  {
-    @apply border-2 border-dotted border-red-400 p-1; 
+    /* @apply border-2 border-dotted border-red-400 p-1;  */
 
   }
 
@@ -94,6 +94,9 @@ p{
 	@apply bg-green-400;
 }
 
+div {
+	@apply p-2;
+}
 
 
 
